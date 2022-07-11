@@ -13,7 +13,7 @@ namespace DataStructuresAndAlgorithms
         {
             int[] data = new int[10];
             IntArrayGenerate(data, 2);
-            IntArrayBubbleSort(data);
+            //IntArrayBubbleSort(data);
 
             IntArrayGenerate(data, 2);
             IntArraySelectionSort(data);
@@ -36,14 +36,18 @@ namespace DataStructuresAndAlgorithms
         {
             int i, j;
             int N = data.Length;
+            //Loop 9 to 0
             for (j = N - 1; j > 0; j--)
             {
+                //Loop 0 to 9
                 for (i = 0; i < j; i++)
                 {
                     if (data[i] > data[i + 1])
                         exchange(data, i, i + 1);
+
                     Console.WriteLine("exchange:" + string.Join(",", data));
                 }
+                Console.WriteLine("outer loop starter:" + string.Join(",", data));
             }
         }
 
@@ -181,9 +185,7 @@ namespace DataStructuresAndAlgorithms
 
         public static void exchange(int[] data, int m, int n)
         {
-            int temporary;
-
-            temporary = data[m];
+            int temporary = data[m];
             data[m] = data[n];
             data[n] = temporary;
         }

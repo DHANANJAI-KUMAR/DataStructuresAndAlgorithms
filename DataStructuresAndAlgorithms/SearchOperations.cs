@@ -11,7 +11,7 @@ namespace DataStructuresAndAlgorithms
         //http://anh.cs.luc.edu/170/notes/CSharpHtml/searching.html
         public SearchOperations()
         {
-            LinearSearch();
+            //LinearSearch();
             BinarySearch();
         }
 
@@ -85,6 +85,7 @@ namespace DataStructuresAndAlgorithms
                     min = mid + 1;
                 else
                     max = mid - 1;
+
                 if (data[mid] == item)
                     return mid;
                 //if (min > max)
