@@ -13,37 +13,38 @@ namespace DataStructuresAndAlgorithms
         {
             int[] data = new int[10];
             IntArrayGenerate(data, 2);
-            //IntArrayBubbleSort(data);
+            IntArrayBubbleSort(data);
 
             IntArrayGenerate(data, 2);
             IntArraySelectionSort(data);
 
-            IntArrayGenerate(data, 2);
-            IntArrayInsertionSort(data);
+            //IntArrayGenerate(data, 2);
+            //IntArrayInsertionSort(data);
 
-            IntArrayGenerate(data, 2);
-            IntArrayShellSortNaive(data);
+            //IntArrayGenerate(data, 2);
+            //IntArrayShellSortNaive(data);
 
-            IntArrayGenerate(data, 2);
-            IntArrayShellSortBetter(data);
+            //IntArrayGenerate(data, 2);
+            //IntArrayShellSortBetter(data);
 
-            IntArrayGenerate(data, 2);
-            IntArrayQuickSort(data, 0, data.Length - 1);
+            //IntArrayGenerate(data, 2);
+            //IntArrayQuickSort(data, 0, data.Length - 1);
 
         }
 
         public static void IntArrayBubbleSort(int[] data)
         {
-            int i, j;
-            int N = data.Length;
-            //Loop 9 to 0
-            for (j = N - 1; j > 0; j--)
+            //Bubble Sort is rather unimpressive as expected. In fact, this algorithm is never used in practice but is of historical interest.
+            //Like the brute-force style of searching, it does way too much work to come up with the right answer!
+            
+            //Loop 0 to 9
+            for (int i = 0; i < data.Length - 1; i++)
             {
                 //Loop 0 to 9
-                for (i = 0; i < j; i++)
+                for (int j = 0; j < data.Length - i - 1; j++)
                 {
-                    if (data[i] > data[i + 1])
-                        exchange(data, i, i + 1);
+                    if (data[j] > data[j + 1])
+                        exchange(data, j, j + 1);
 
                     Console.WriteLine("exchange:" + string.Join(",", data));
                 }
@@ -53,25 +54,33 @@ namespace DataStructuresAndAlgorithms
 
         public static void IntArraySelectionSort(int[] data)
         {
-            int i;
-            int N = data.Length;
-            for (i = 0; i < N - 1; i++)
+            //Selection Sort and Insertion Sort are also rather unimpressive on their own. Even though Selection Sort can in
+            //theory do a lot less data movement, it must make a large number of comparisons to find the minimum value to be
+            //moved. Again it is way too much work. Insertion Sort, while unimpressive, fares a bit better and turns out to be
+            //a nice building block (if modified) for the Shell Sort. Varying the interval size drastically reduces the amount
+            //of data movement (and the distance it has to move).
+            for (int i = 0; i < data.Length - 1; i++)
             {
-                int k = IntArrayMin(data, i);
-                if (i != k)
-                    exchange(data, i, k);
+                int min = IntArrayMin(data, i);
+                if (i != min)
+                    exchange(data, i, min);
                 Console.WriteLine("exchange:" + string.Join(",", data));
             }
+        }
+        private static int IntArrayMin(int[] data, int i)
+        {
+            int minPos = i;
+            for (int j = i + 1; j < data.Length; j++)
+                if (data[j] < data[minPos])
+                    minPos = j;
+            return minPos;
         }
 
         public static void IntArrayInsertionSort(int[] data)
         {
-            int i, j;
-            int N = data.Length;
-
-            for (j = 1; j < N; j++)
+            for (int j = 1; j < data.Length; j++)
             {
-                for (i = j; i > 0 && data[i] < data[i - 1]; i--)
+                for (int i = j; i > 0 && data[i] < data[i - 1]; i--)
                 {
                     exchange(data, i, i - 1);
                     Console.WriteLine("exchange:" + string.Join(",", data));
@@ -87,6 +96,12 @@ namespace DataStructuresAndAlgorithms
 
         public static void IntArrayShellSort(int[] data, int[] intervals)
         {
+            //Shell Sort does rather well, especially when we pick the right intervals.
+            //In practice, the intervals also need to be adjusted based on the size of the array,
+            //which is what we do as larger array sizes are considered. This is no trivial
+            //task but a great deal of work has already been done in the past to determine
+            //functions that generate good intervals.
+
             int i, j, k, m;
             int N = data.Length;
 
@@ -129,14 +144,7 @@ namespace DataStructuresAndAlgorithms
         }
 
 
-        public static int IntArrayMin(int[] data, int start)
-        {
-            int minPos = start;
-            for (int pos = start + 1; pos < data.Length; pos++)
-                if (data[pos] < data[minPos])
-                    minPos = pos;
-            return minPos;
-        }
+        
 
         public static void IntArrayGenerate(int[] data, int randomSeed)
         {
@@ -152,6 +160,11 @@ namespace DataStructuresAndAlgorithms
 
         public static void IntArrayQuickSort(int[] data, int l, int r)
         {
+            //The Quicksort is generally fastest. It is by far the most commonly used sorting algorithm. Yet there are signs that Shell sort
+            //is making a comeback in embedded systems, because it concise to code and is still quite fast.See[WikipediaShellSort],
+            //where it is mentioned that the[uClibc] library makes use of Shell sort in its qsort() implementation, rather than implementing
+            //the library sort with the more common quicksort.
+                
             int i, j;
             int x;
 
