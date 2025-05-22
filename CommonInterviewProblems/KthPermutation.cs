@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using Ds.Common.Lib;
+using System.Text;
 
 namespace CommonInterviewProblems
 {
@@ -36,19 +37,13 @@ namespace CommonInterviewProblems
 
             for (int i = left; i <= right; i++)
             {
-                Swap(chars, left, i);                       // Make a choice
-                Permute(chars, left + 1, right);            // Explore
-                Swap(chars, left, i);                       // Undo (backtrack)
+                ArrayUtil.Swap(chars, left, i);                       // Make a choice
+                Permute(chars, left + 1, right);                        // Explore
+                ArrayUtil.Swap(chars, left, i);                       // Undo (backtrack)
             }
         }
 
-        static void Swap(char[] arr, int i, int j)
-        {
-            if (i == j) return;
-            char temp = arr[i];
-            arr[i] = arr[j];
-            arr[j] = temp;
-        }
+        
 
         private string GetPermutation(int n, int k)
         {

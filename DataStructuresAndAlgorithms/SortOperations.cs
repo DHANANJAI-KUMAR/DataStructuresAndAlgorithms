@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ds.Common.Lib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -44,7 +45,7 @@ namespace DataStructuresAndAlgorithms
                 for (int j = 0; j < data.Length - i - 1; j++)
                 {
                     if (data[j] > data[j + 1])
-                        exchange(data, j, j + 1);
+                        ArrayUtil.Exchange(data, j, j + 1);
 
                     Console.WriteLine("exchange:" + string.Join(",", data));
                 }
@@ -63,7 +64,7 @@ namespace DataStructuresAndAlgorithms
             {
                 int min = IntArrayMin(data, i);
                 if (i != min)
-                    exchange(data, i, min);
+                    ArrayUtil.Exchange(data, i, min);
                 Console.WriteLine("exchange:" + string.Join(",", data));
             }
         }
@@ -82,7 +83,7 @@ namespace DataStructuresAndAlgorithms
             {
                 for (int i = j; i > 0 && data[i] < data[i - 1]; i--)
                 {
-                    exchange(data, i, i - 1);
+                    ArrayUtil.Exchange(data, i, i - 1);
                     Console.WriteLine("exchange:" + string.Join(",", data));
                 }
             }
@@ -116,7 +117,7 @@ namespace DataStructuresAndAlgorithms
                     {
                         for (i = j; i >= interval && data[i] < data[i - interval]; i -= interval)
                         {
-                            exchange(data, i, i - interval);
+                            ArrayUtil.Exchange(data, i, i - interval);
                         }
                     }
                 }
@@ -142,9 +143,6 @@ namespace DataStructuresAndAlgorithms
                 intervals[i] = 3 * intervals[i - 1] + 1;
             return intervals;
         }
-
-
-        
 
         public static void IntArrayGenerate(int[] data, int randomSeed)
         {
@@ -180,7 +178,7 @@ namespace DataStructuresAndAlgorithms
                     j--;
                 if (i <= j)
                 {
-                    exchange(data, i, j);
+                    ArrayUtil.Exchange(data, i, j);
                     i++;
                     j--;
                 }
@@ -194,16 +192,6 @@ namespace DataStructuresAndAlgorithms
             if (i < r)
                 IntArrayQuickSort(data, i, r);
         }
-
-
-        public static void exchange(int[] data, int m, int n)
-        {
-            int temporary = data[m];
-            data[m] = data[n];
-            data[n] = temporary;
-        }
-
-
-
+   
     }
 }

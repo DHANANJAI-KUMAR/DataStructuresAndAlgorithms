@@ -51,50 +51,42 @@ namespace DataStructuresAndAlgorithms
         public static void BinarySearch()
         {
             //http://anh.cs.luc.edu/170/notes/CSharpHtml/binarysearching.html
-            Console.WriteLine("Please enter some integers, separated by spaces:");
-            string input = "10   20   30   40   50   60   70   80   90   100  115  125  135  145  155  178  198";
-            string[] integers = input.Split(" ".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-            int[] data = new int[integers.Length];
-            for (int i = 0; i < data.Length; i++)
-                data[i] = int.Parse(integers[i]);
+            int[] data = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 115, 125, 135, 145, 155, 178, 198 };
 
             //IntArrayShellSortBetter(data);
-            while (true)
-            {
-                Console.WriteLine("Please enter a number you want to find (blank line to end):");
-                input = Console.ReadLine();
-                if (input.Length == 0)
-                    break;
-                int searchItem = int.Parse(input);
-                int foundPos = IntArrayBinarySearch(data, searchItem);
-                if (foundPos < 0)
-                    Console.WriteLine("Item {0} not found", searchItem);
-                else
-                    Console.WriteLine("Item {0} found at position {1}", searchItem, foundPos);
-            }
+            
+            var searchItem = 155;
+            int foundPos = IntArrayBinarySearch(data, searchItem);
+            if (foundPos < 0)
+                Console.WriteLine("Item {0} not found", searchItem);
+            else
+                Console.WriteLine("Item {0} found at position {1}", searchItem, foundPos);
+            
         }
 
-        public static int IntArrayBinarySearch(int[] data, int item)
+        public static int IntArrayBinarySearch(int[] arr, int target)
         {
-            int min = 0;
-            int max = data.Length - 1;
-            do
-            {
-                int mid = (min + max) / 2;
-                if (item > data[mid])
-                    min = mid + 1;
-                else
-                    max = mid - 1;
+            Array.Sort(arr);
+            int left = 0;
+            int right = arr.Length - 1;
 
-                if (data[mid] == item)
-                    return mid;
-                //if (min > max)
-                //   break;
-            } while (min <= max);
-            return -1;
+            while (left <= right)
+            {
+                int mid = left + (right - left) / 2;
+
+                if (arr[mid] == target)
+                    return mid; // Found the target, return index
+
+                if (arr[mid] < target)
+                    left = mid + 1;
+                else
+                    right = mid - 1;
+            }
+
+            return -1; // Not found
         }
 
-        public static int IntArrayLinearSearch(int[] data, int item, int start)
+        public static int IntArrayLinearSearch(int[] data, int item, int start = 0)
         {
             int N = data.Length;
             if (start < 0)
@@ -104,14 +96,6 @@ namespace DataStructuresAndAlgorithms
                     return i;
             return -1;
         }
-
-        public static int IntArrayLinearSearch(int[] data, int item)
-        {
-            int N = data.Length;
-            for (int i = 0; i < N; i++)
-                if (data[i] == item)
-                    return i;
-            return -1;
-        }
+        
     }
 }

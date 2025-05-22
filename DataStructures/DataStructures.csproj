@@ -13,4 +13,8 @@
     <PackageReference Include="coverlet.collector" Version="3.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Ds.Common.Lib\Ds.Common.Lib.csproj" />
+  </ItemGroup>
+
 </Project>

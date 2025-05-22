@@ -1,10 +1,10 @@
 ﻿namespace CommonInterviewProblems
 {
     [TestClass]
-    public sealed class FirstandLastPositionofTarget
+    public sealed class FirstAndLastPositionofTarget
     {
         [TestMethod]
-        public void FirstandLastPositionofTargetTest()
+        public void FirstAndLastPositionofTargetTest()
         {
             //given a sorted array of integers arr and an integer target, find the index of the first and last position of target in arr. retrun [-1, -1] if not found
 
@@ -12,7 +12,6 @@
             int target = 8;
             int[] result = SearchRange(arr, target);
             Console.WriteLine($"[{result[0]}, {result[1]}]"); // Output: [3, 4]
-
         }
 
         int[] SearchRange(int[] arr, int target)

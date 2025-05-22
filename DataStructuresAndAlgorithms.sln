@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35919.96 d17.13
+VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructuresAndAlgorithms", "DataStructuresAndAlgorithms\DataStructuresAndAlgorithms.csproj", "{7AAFD7B3-1225-4420-94E4-2E8D73519F4E}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructures", "DataStructures\DataStructures.csproj", "{675AF7F3-7497-49A5-8835-00F3F78AD342}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonInterviewProblems", "CommonInterviewProblems\CommonInterviewProblems.csproj", "{DFA1628C-B711-482A-A65F-AC8256174C21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ds.Common.Lib", "Ds.Common.Lib\Ds.Common.Lib.csproj", "{A79451D3-A983-4822-9F8E-3813521C042E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{DFA1628C-B711-482A-A65F-AC8256174C21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFA1628C-B711-482A-A65F-AC8256174C21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFA1628C-B711-482A-A65F-AC8256174C21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A79451D3-A983-4822-9F8E-3813521C042E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A79451D3-A983-4822-9F8E-3813521C042E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A79451D3-A983-4822-9F8E-3813521C042E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A79451D3-A983-4822-9F8E-3813521C042E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

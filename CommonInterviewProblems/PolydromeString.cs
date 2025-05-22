@@ -8,6 +8,8 @@
         {
             string input = "racecar";
 
+            //bool status = IsPalindromeDelete(input);
+
             int palindromeCount = CountPalindromicSubstrings(input);
             Console.WriteLine($"Found {palindromeCount} palindromic substrings.");
 
@@ -16,6 +18,31 @@
             else
                 Console.WriteLine("This is not a polydrome.");
             
+        }
+
+        private bool IsPalindrome(string s)
+        {
+            int left = 0, right = s.Length-1;
+            while (left < right)
+            {
+                if (s[left++] != s[right--])
+                    return false;
+            }
+            return true;
+        }
+
+        private bool IsPalindromeDelete(string s)
+        {
+            int left = 0, right = s.Length-1;
+            while (left < right)
+            {
+                if (s[left] != s[right])
+                    return false;
+                
+                left++;
+                right--;
+            }
+            return true;
         }
 
         private int CountPalindromicSubstrings(string input)
@@ -33,16 +60,6 @@
             return count;
         }
 
-        private bool IsPalindrome(string s)
-        {
-            int left = 0, right = s.Length - 1;
-            while (left < right)
-            {
-                if (s[left++] != s[right--])
-                    return false;
-            }
-            return true;
-        }
 
 
     }
