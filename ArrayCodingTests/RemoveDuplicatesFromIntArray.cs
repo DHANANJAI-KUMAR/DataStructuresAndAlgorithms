@@ -1,4 +1,4 @@
-﻿namespace CommonInterviewProblems
+﻿namespace ArrayCodingTests
 {
     [TestClass]
     public sealed class RemoveDuplicatesFromIntArray

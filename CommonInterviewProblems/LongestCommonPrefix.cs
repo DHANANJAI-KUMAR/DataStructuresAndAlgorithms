@@ -14,6 +14,11 @@ namespace CommonInterviewProblems
             //Output: "gee"
             string[] arr = {  "geeks", "geek", "geezer", "geeksforgeeks" };
             Console.WriteLine($"Original arr {JsonConvert.SerializeObject(arr)}");
+
+            
+            var str3 = LongestCommonPrefixUsingCharByCharMatching(arr);
+            Console.WriteLine($"longestCommonPrefixUsingCharByCharMatching: {str3}");
+            
             //var str = LongestCommonPrefixUsingSorting(arr);
             //Console.WriteLine($"LongestCommonPrefixUsingSorting: {str}");
 
@@ -23,6 +28,41 @@ namespace CommonInterviewProblems
             var str2 = LongestCommonPrefixsingDivideAndConquer(arr, 0, arr.Length - 1);
             Console.WriteLine($"LongestCommonPrefixsingDivideAndConquer: {str2}");
 
+            
+
+        }
+
+        // C# program to find the longest common prefix using Character by Character Matching
+        private string LongestCommonPrefixUsingCharByCharMatching(string[] arr)
+        {
+            //Character-by-character matching works faster than word-by-word matching.
+            //As we immediately stops the matching when a mismatch is found. It is efficient, especially when there’s a
+            //short or no common prefix.
+            //On the other hand, word-by-word matching goes through each word entirely, even if there’s no common prefix at all.
+
+            // Find length of smallest string
+            int minLen = arr[0].Length;
+            foreach (string str in arr)
+                minLen = Math.Min(minLen, str.Length);
+
+            string res = "";
+            for (int i = 0; i < minLen; i++)
+            {
+                // Current character (must be the same // in all strings to be a part of result)
+                char ch = arr[0][i];
+
+                foreach (string str in arr)
+                {
+                    if (str[i] != ch)
+                    {
+                        return res;
+                    }
+                }
+
+                // Append to result
+                res += ch;
+            }
+            return res;
         }
 
         // Divide and Conquer function to find the longest common prefix, This is similar to the merge sort technique
@@ -44,9 +84,8 @@ namespace CommonInterviewProblems
                 string p2 = LongestCommonPrefixsingDivideAndConquer(arr, mid + 1, r);
 
                 // Find and return the Longest Common Prefix of sub array arr[l ... r]
-                return StringUtil.CommonPrefixFromString1(p1, p2);
+                return StringUtil.CommonPrefix1(p1, p2);
                 //return StringUtil.CommonPrefixFromString2(p1, p2);
-
 
             }
             return "";
@@ -119,7 +158,7 @@ namespace CommonInterviewProblems
             var last = arr[arr.Length - 1];
 
             //var sb = StringUtil.CommonPrefixFromString1(first, last);
-            var sb = StringUtil.CommonPrefixFromString2(first, last);
+            var sb = StringUtil.CommonPrefix1(first, last);
 
             return sb.ToString();
 

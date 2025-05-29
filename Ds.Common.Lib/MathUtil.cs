@@ -7,8 +7,22 @@ using System.Threading.Tasks;
 
 namespace Ds.Common.Lib
 {
-    public class ArrayUtil
+    public class MathUtil
     {
+        public MathUtil()
+        {
+            int a = 17;
+            int b = 5;
+
+            int quotient = a / b;   // 17 / 5 = 3
+            int remainder = a % b;  // 17 % 5 = 2
+
+            //x %= 5; => x = x % 5;
+
+
+
+        }
+
         public static void Exchange(int[] arr, int i, int j)
         {
             if (i == j) return; 
@@ -17,10 +31,10 @@ namespace Ds.Common.Lib
             arr[j] = temp;
         }
 
-        public static void Swap<T>(T[] arr, int i, int j)
+        public static void Swap(char[] arr, int i, int j)
         {
             if (i == j) return;
-            var temp = arr[i];
+            char temp = arr[i];
             arr[i] = arr[j];
             arr[j] = temp;
         }

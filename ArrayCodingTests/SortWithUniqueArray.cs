@@ -1,6 +1,4 @@
-﻿using System.Xml;
-
-namespace CommonInterviewProblems
+﻿namespace ArrayCodingTests
 {
     [TestClass]
     public sealed class SortWithUniqueArray

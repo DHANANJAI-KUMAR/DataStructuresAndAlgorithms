@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataStructuresAndAlgorithms
+namespace Ds.Algorithms
 {
     //http://anh.cs.luc.edu/170/notes/CSharpHtml/sorting.html#shell-sort
     public class SortOperations

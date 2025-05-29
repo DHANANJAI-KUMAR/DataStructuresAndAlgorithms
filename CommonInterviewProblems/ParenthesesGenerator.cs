@@ -1,7 +1,4 @@
-﻿using static Microsoft.ApplicationInsights.MetricDimensionNames.TelemetryContext;
-using static System.Formats.Asn1.AsnWriter;
-
-namespace CommonInterviewProblems
+﻿namespace CommonInterviewProblems
 {
     [TestClass]
     public sealed class ParenthesesGenerator

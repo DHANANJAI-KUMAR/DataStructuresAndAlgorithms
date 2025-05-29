@@ -1,6 +1,5 @@
 ﻿using Ds.Common.Lib;
-
-namespace CommonInterviewProblems
+namespace ArrayCodingTests
 {
     [TestClass]
     public sealed class ZigZagSequence

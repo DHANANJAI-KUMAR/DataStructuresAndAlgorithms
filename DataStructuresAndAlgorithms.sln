@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonInterviewProblems", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ds.Common.Lib", "Ds.Common.Lib\Ds.Common.Lib.csproj", "{A79451D3-A983-4822-9F8E-3813521C042E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayCodingTests", "ArrayCodingTests\ArrayCodingTests.csproj", "{BC12579F-3FF3-4017-8B10-71D173F14DBC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A79451D3-A983-4822-9F8E-3813521C042E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A79451D3-A983-4822-9F8E-3813521C042E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A79451D3-A983-4822-9F8E-3813521C042E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC12579F-3FF3-4017-8B10-71D173F14DBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC12579F-3FF3-4017-8B10-71D173F14DBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC12579F-3FF3-4017-8B10-71D173F14DBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC12579F-3FF3-4017-8B10-71D173F14DBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MathUtil.cs" />
     <Compile Include="ArrayUtil.cs" />
     <Compile Include="ConsoleUtil.cs" />
     <Compile Include="StringUtil.cs" />

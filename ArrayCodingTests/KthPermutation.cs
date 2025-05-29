@@ -1,7 +1,6 @@
 ﻿using Ds.Common.Lib;
 using System.Text;
-
-namespace CommonInterviewProblems
+namespace ArrayCodingTests
 {
     [TestClass]
     public sealed class KthPermutation
@@ -48,7 +47,8 @@ namespace CommonInterviewProblems
         private string GetPermutation(int n, int k)
         {
             var nums = new List<int>();
-            for (int i = 1; i <= n; i++) nums.Add(i);
+            for (int i = 1; i <= n; i++) 
+                nums.Add(i);
 
             var factorial = new int[n];
             factorial[0] = 1;
@@ -57,7 +57,6 @@ namespace CommonInterviewProblems
 
             k--;  // Convert to 0-based index
             var sb = new StringBuilder();
-
             for (int i = n; i >= 1; i--)
             {
                 int idx = k / factorial[i - 1];
