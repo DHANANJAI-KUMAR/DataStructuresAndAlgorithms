@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataStructures.BaseClass
 {
-    public class LinkedList
+    public class MyLinkedList
     {
         // The first node(head) of the linked list
         // Will be an object of type Node (null by default)

@@ -1,20 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Ds.Algorithms
+﻿namespace DataStructureTests
 {
-    public class SearchOperations
+    [TestClass]
+    public sealed class SearchOperationsTest
     {
-        //http://anh.cs.luc.edu/170/notes/CSharpHtml/searching.html
-        public SearchOperations()
+
+        [TestMethod]
+        public void LinearSearchTest()
         {
-            //LinearSearch();
-            BinarySearch();
+            SearchOperations.LinearSearch();
         }
 
+        [TestMethod]
+        public void BinarySearchTest()
+        {
+            SearchOperations.BinarySearch();
+        }
+    }
+
+    public static class SearchOperations
+    {
+        //http://anh.cs.luc.edu/170/notes/CSharpHtml/searching.html
         public static void LinearSearch()
         {
             //http://anh.cs.luc.edu/170/notes/CSharpHtml/searching.html
@@ -64,7 +69,7 @@ namespace Ds.Algorithms
             
         }
 
-        public static int IntArrayBinarySearch(int[] arr, int target)
+        private static int IntArrayBinarySearch(int[] arr, int target)
         {
             Array.Sort(arr);
             int left = 0;
@@ -86,7 +91,7 @@ namespace Ds.Algorithms
             return -1; // Not found
         }
 
-        public static int IntArrayLinearSearch(int[] data, int item, int start = 0)
+        private static int IntArrayLinearSearch(int[] data, int item, int start = 0)
         {
             int N = data.Length;
             if (start < 0)
@@ -98,4 +103,6 @@ namespace Ds.Algorithms
         }
         
     }
+
+
 }

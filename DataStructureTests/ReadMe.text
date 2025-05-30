@@ -1,0 +1,73 @@
+﻿
+
+1. Array and String Manipulation
+	Reverse a string or array.
+	Remove duplicates from an array.
+	Find the first non-repeating character.
+	Implement strStr() (substring search).
+	Merge two sorted arrays.
+	Rotate an array to the right by k steps
+	Move all 0s to the end while maintaining the relative order of non-zero elements.
+	Return the length of the longest substring without repeating characters.
+	Return all elements that appear twice in a list of integers (1 ≤ a[i] ≤ n).
+	Reverse the order of words in a string (words separated by spaces).
+	Check if a string is a palindrome (ignore spaces, punctuation, and case).
+	Return an array output such that output[i] is the product of all elements except nums[i].
+	Group strings that are anagrams of each other.
+	Given an array containing n distinct numbers from 0 to n, find the missing one.
+	Given an array with n+1 integers where each integer is in range [1, n], find the duplicate without modifying the array or using extra space
+	Return the total number of subarrays whose sum equals k.
+
+
+2. Sorting and Searching
+	Binary search in a sorted array.
+	Implement bubble/insertion/merge sort.
+	Find the kth largest/smallest element.
+	Search in rotated sorted array.
+
+
+3. Hashing and HashTable(Dictionaries in C#)
+	Two-sum problem.
+	Group anagrams.
+	Find the most frequent word or number.
+
+4. Dynamic Programming
+	Fibonacci (memoization & tabulation).
+	Longest common subsequence.
+	0/1 Knapsack problem.
+	Coin change.
+
+5. Linked Lists
+	Reverse a linked list.
+	Detect cycle in linked list.
+	Merge two sorted linked lists.
+	Find intersection node.
+
+6. Binary Trees
+	Inorder, Preorder, Postorder traversal.
+	Maximum depth of binary tree.
+	Lowest common ancestor.
+	Check if a tree is balanced.
+
+7. Recursion & Backtracking
+	Permutations/combinations.
+	N-Queens problem.
+	Sudoku solver.
+	Subset sum.
+
+8. Stack and Queue
+	Implement a stack with min() in O(1).
+	Evaluate Reverse Polish Notation.
+	Implement queue using stacks.
+
+9. Math & Bit Manipulation
+	Count set bits.
+	Find missing number in 0..n.
+	Detect power of two.
+
+10. Object-Oriented Design (OOP)
+	Design a parking lot.
+	Implement a simple elevator system.
+	Design a library management system.
+	LRU Cache (often asked).
+

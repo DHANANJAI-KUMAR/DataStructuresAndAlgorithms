@@ -1,38 +1,60 @@
 ﻿using Ds.Common.Lib;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Ds.Algorithms
+namespace DataStructureTests
 {
+    [TestClass]
+    public sealed class SortOperationsTest
+    {
+        int[] data = new int[10];
+
+        [TestMethod]
+        public void IntArrayBubbleSortTest()
+        {
+            SortOperations.IntArrayGenerate(data, 2);
+            SortOperations.IntArrayBubbleSort(data);
+        }
+
+        [TestMethod]
+        public void IntArraySelectionSortTest()
+        {
+            SortOperations.IntArrayGenerate(data, 2);
+            SortOperations.IntArraySelectionSort(data);
+        }
+
+        [TestMethod]
+        public void IntArrayInsertionSortTest()
+        {
+            SortOperations.IntArrayGenerate(data, 2);
+            SortOperations.IntArrayInsertionSort(data);
+        }
+
+        [TestMethod]
+        public void IntArrayShellSortNaiveTest()
+        {
+            SortOperations.IntArrayGenerate(data, 2);
+            SortOperations.IntArrayShellSortNaive(data);
+        }
+
+        [TestMethod]
+        public void IntArrayShellSortBetterTest()
+        {
+            SortOperations.IntArrayGenerate(data, 2);
+            SortOperations.IntArrayShellSortBetter(data);
+        }
+
+        [TestMethod]
+        public void IntArrayQuickSortTest()
+        {
+            SortOperations.IntArrayGenerate(data, 2);
+            SortOperations.IntArrayQuickSort(data, 0, data.Length - 1);
+        }
+
+
+    }
+
     //http://anh.cs.luc.edu/170/notes/CSharpHtml/sorting.html#shell-sort
     public class SortOperations
     {
-        public SortOperations()
-        {
-            int[] data = new int[10];
-            IntArrayGenerate(data, 2);
-            IntArrayBubbleSort(data);
-
-            IntArrayGenerate(data, 2);
-            IntArraySelectionSort(data);
-
-            //IntArrayGenerate(data, 2);
-            //IntArrayInsertionSort(data);
-
-            //IntArrayGenerate(data, 2);
-            //IntArrayShellSortNaive(data);
-
-            //IntArrayGenerate(data, 2);
-            //IntArrayShellSortBetter(data);
-
-            //IntArrayGenerate(data, 2);
-            //IntArrayQuickSort(data, 0, data.Length - 1);
-
-        }
-
         public static void IntArrayBubbleSort(int[] data)
         {
             //Bubble Sort is rather unimpressive as expected. In fact, this algorithm is never used in practice but is of historical interest.
@@ -45,7 +67,7 @@ namespace Ds.Algorithms
                 for (int j = 0; j < data.Length - i - 1; j++)
                 {
                     if (data[j] > data[j + 1])
-                        ArrayUtil.Exchange(data, j, j + 1);
+                        ArrayUtil.Swap(data, j, j + 1);
 
                     Console.WriteLine("exchange:" + string.Join(",", data));
                 }
@@ -64,7 +86,7 @@ namespace Ds.Algorithms
             {
                 int min = IntArrayMin(data, i);
                 if (i != min)
-                    ArrayUtil.Exchange(data, i, min);
+                    ArrayUtil.Swap(data, i, min);
                 Console.WriteLine("exchange:" + string.Join(",", data));
             }
         }
@@ -83,7 +105,7 @@ namespace Ds.Algorithms
             {
                 for (int i = j; i > 0 && data[i] < data[i - 1]; i--)
                 {
-                    ArrayUtil.Exchange(data, i, i - 1);
+                    ArrayUtil.Swap(data, i, i - 1);
                     Console.WriteLine("exchange:" + string.Join(",", data));
                 }
             }
@@ -117,7 +139,7 @@ namespace Ds.Algorithms
                     {
                         for (i = j; i >= interval && data[i] < data[i - interval]; i -= interval)
                         {
-                            ArrayUtil.Exchange(data, i, i - interval);
+                            ArrayUtil.Swap(data, i, i - interval);
                         }
                     }
                 }
@@ -178,7 +200,7 @@ namespace Ds.Algorithms
                     j--;
                 if (i <= j)
                 {
-                    ArrayUtil.Exchange(data, i, j);
+                    ArrayUtil.Swap(data, i, j);
                     i++;
                     j--;
                 }

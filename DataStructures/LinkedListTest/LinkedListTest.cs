@@ -13,7 +13,7 @@ namespace DataStructures.LinkedListTest
         public void createasimplelinkedlistwith3nodes()
         {
             /* Start with the empty list. */
-            LinkedList llist = new LinkedList();
+            MyLinkedList llist = new MyLinkedList();
 
             llist.head = new Node(1);
             Node second = new Node(2);
@@ -32,7 +32,7 @@ namespace DataStructures.LinkedListTest
         public void InsertingNodeToSimplelinkedlist()
         {
             /* Start with the empty list. */
-            LinkedList llist = new LinkedList();
+            MyLinkedList llist = new MyLinkedList();
 
             // Insert 6. So linked list becomes 6->NUllist
             llist.append(6);
@@ -63,7 +63,7 @@ namespace DataStructures.LinkedListTest
         public void DeletingNodeToSimplelinkedlist()
         {
             /* Start with the empty list. */
-            LinkedList llist = new LinkedList();
+            MyLinkedList llist = new MyLinkedList();
 
             llist.push(7);
             llist.push(1);

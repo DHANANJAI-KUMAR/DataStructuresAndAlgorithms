@@ -46,10 +46,6 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SearchOperations.cs" />
-    <Compile Include="SortOperations.cs" />
-    <Compile Include="SwapLogic.cs" />
-    <Compile Include="UtilityClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

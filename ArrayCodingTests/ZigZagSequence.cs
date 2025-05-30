@@ -20,7 +20,7 @@ namespace ArrayCodingTests
             int n = arr.Length;
             int mid = (n - 1) / 2;
             // Swap the middle element with the last element
-            ArrayUtil.Exchange(arr, mid, n - 1);
+            ArrayUtil.Swap(arr, mid, n - 1);
             // Reverse the second half of the array
             Array.Reverse(arr, mid, n - mid - 1);
             return arr;   //1,2,5,3,4

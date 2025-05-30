@@ -1,24 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Ds.Algorithms
+﻿namespace DataStructureTests
 {
-    public class SwapLogic
+    [TestClass]
+    public sealed class SwapLogicTest
     {
-        //http://javarevisited.blogspot.com/2013/02/swap-two-numbers-without-third-temp-variable-java-program-example-tutorial.html
-        public SwapLogic()
+
+        [TestMethod]
+        public void SwapByAdditionTest()
         {
             int a = 12;
             int b = 38;
-            SwapByAddition(ref a, ref b);
-            SwapByDivision(ref a, ref b);
-            SwapByXOR(ref a, ref b);
+            SwapLogic.SwapByAddition(ref a, ref b);
         }
 
-        private void SwapByAddition(ref int a, ref int b)
+        [TestMethod]
+        public void SwapByDivisionTest()
+        {
+            int a = 12;
+            int b = 38;
+            SwapLogic.SwapByDivision(ref a, ref b);
+        }
+
+        [TestMethod]
+        public void SwapByXORTest()
+        {
+            int a = 12;
+            int b = 38;
+            SwapLogic.SwapByXOR(ref a, ref b);
+        }
+
+    }
+
+
+    public static class SwapLogic
+    {
+        //http://javarevisited.blogspot.com/2013/02/swap-two-numbers-without-third-temp-variable-java-program-example-tutorial.html
+        public static void SwapByAddition(ref int a, ref int b)
         {
             Console.WriteLine("value of a and b before swapping, a: " + a + " b: " + b);
             //swapping value of two numbers without using temp variable
@@ -28,7 +44,7 @@ namespace Ds.Algorithms
             Console.WriteLine("value of a and b after swapping, a: " + a + " b: " + b);
         }
 
-        private void SwapByDivision(ref int a, ref int b)
+        public static void SwapByDivision(ref int a, ref int b)
         {
             Console.WriteLine("value of a and b before swapping, a: " + a + " b: " + b);
             //swapping value of two numbers without using temp variable using multiplication and division
@@ -38,7 +54,7 @@ namespace Ds.Algorithms
             Console.WriteLine("value of a and b after swapping using multiplication and division, a: " + a + " b: " + b);
         }
 
-        private void SwapByXOR(ref int a, ref int b)
+        public static void SwapByXOR(ref int a, ref int b)
         {
             /*
             A       B       A ^ B(A XOR B)
@@ -54,8 +70,6 @@ namespace Ds.Algorithms
             a = a ^ b; //now a is 4 and b is 2, numbers are swapped
             Console.WriteLine("value of a and b after swapping using XOR bitwise operation, a: " + a + " b: " + b);
         }
-
-
-
     }
+
 }

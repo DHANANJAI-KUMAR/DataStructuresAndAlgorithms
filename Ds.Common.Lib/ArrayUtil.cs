@@ -9,14 +9,6 @@ namespace Ds.Common.Lib
 {
     public class ArrayUtil
     {
-        public static void Exchange(int[] arr, int i, int j)
-        {
-            if (i == j) return; 
-            int temp = arr[i];
-            arr[i] = arr[j];
-            arr[j] = temp;
-        }
-
         public static void Swap<T>(T[] arr, int i, int j)
         {
             if (i == j) return;

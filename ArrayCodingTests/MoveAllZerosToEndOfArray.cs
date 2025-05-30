@@ -31,7 +31,7 @@ namespace ArrayCodingTests
                     while (j < arr.Length - 1 && arr[j] == 0)
                     {
                         //if (arr[j] != 0) 
-                        ArrayUtil.Swap(arr, j, j + 1);
+                        ArrayUtil.Swap<int>(arr, j, j + 1);
                         j++;
                     }
                 }
@@ -59,7 +59,7 @@ namespace ArrayCodingTests
                 if (arr[i] != 0)
                 {
                     // Swap the current element with the 0 at index 'count'
-                    ArrayUtil.Swap(arr, i, count);
+                    ArrayUtil.Swap<int>(arr, i, count);
 
                     // Move 'count' pointer to the next position
                     count++;
