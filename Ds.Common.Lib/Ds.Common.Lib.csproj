@@ -44,6 +44,7 @@
     <Compile Include="MathUtil.cs" />
     <Compile Include="ArrayUtil.cs" />
     <Compile Include="ConsoleUtil.cs" />
+    <Compile Include="QueueUtil.cs" />
     <Compile Include="StringUtil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

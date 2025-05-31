@@ -1,11 +1,12 @@
-﻿using System;
+﻿using DataStructures.Nodes;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataStructures.BaseClass
+namespace DataStructures.LinkedLists
 {
     public class DoublyLinkedList
     {

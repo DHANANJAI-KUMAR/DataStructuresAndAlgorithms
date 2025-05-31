@@ -1,4 +1,4 @@
-﻿using DataStructures.BaseClass;
+﻿using DataStructures.Nodes;
 
 namespace CommonInterviewProblems
 {

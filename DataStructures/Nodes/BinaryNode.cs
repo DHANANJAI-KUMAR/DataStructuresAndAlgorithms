@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DataStructures.BaseClass
+﻿
+namespace DataStructures.Nodes
 {
     public class BinaryNode
     {
@@ -15,7 +10,7 @@ namespace DataStructures.BaseClass
         public BinaryNode(int key)
         {
             this.key = key;
-            this.left = this.right = null;
+            left = right = null;
         }
 
         public BinaryNode(int key, BinaryNode left, BinaryNode right)

@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DataStructures.BaseClass
+﻿namespace DataStructures.Nodes
 {
     public class DoublyNode
     {
@@ -20,7 +13,7 @@ namespace DataStructures.BaseClass
 
         public DoublyNode(int d, DoublyNode next, DoublyNode prev)
         {
-            this.data = d;
+            data = d;
             this.next = next;
             this.prev = prev;
         }
