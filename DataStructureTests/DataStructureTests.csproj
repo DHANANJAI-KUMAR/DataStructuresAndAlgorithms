@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DataStructures\DataStructures.csproj" />
     <ProjectReference Include="..\Ds.Common.Lib\Ds.Common.Lib.csproj" />
   </ItemGroup>
 
