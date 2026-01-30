@@ -8,13 +8,14 @@ namespace CommonInterviewProblems
         [TestMethod]
         public void SumOfTwoLargeNumbersAsStringsTest()
         {
-            string s1 = "7777555511111111", s2 = "3332222221111";
-            var sum = findSum(s1, s2);
+            //string s1 = "7777555511111111", s2 = "3332222221111";
+            string s2 = "7777555511111111", s1 = "3332222221111";
+            var sum = findSumUsingWhileLoop(s1, s2);
             //7780887733332222
             Console.WriteLine();
         }
 
-        private string findSum(string s1, string s2)
+        private string findSumUsingWhileLoop(string s1, string s2)
         {
             // If one string is empty, return the other
             if (s1.Length == 0) return s2;
@@ -24,8 +25,8 @@ namespace CommonInterviewProblems
             var sb = new StringBuilder();
 
             // Indices to traverse strings from end
-            int i = s1.Length - 1;
-            int j = s2.Length - 1;
+            int i = s1.Length-1;
+            int j = s2.Length-1;
 
             // Carry to handle digit sum > 9
             int carry = 0;
@@ -57,14 +58,14 @@ namespace CommonInterviewProblems
         }
 
 
-        private string findSumMy(string s1, string s2)
+        private string findSumUsingForLoop(string s1, string s2)
         {
             var sb = "";
             int carry = 0;
             var maxLength = Math.Max(s1.Length, s2.Length);
             s2 = s2.PadLeft(maxLength, '0');
             s1 = s1.PadLeft(maxLength, '0');
-            for (int i = maxLength - 1; i >= 0; i--)
+            for (int i = maxLength-1; i >= 0; i--)
             {
                 var digit1 = (i <= s1.Length) ? int.Parse(s1[i].ToString()) : 0;
                 var digit2 = (i <= s2.Length) ? int.Parse(s2[i].ToString()) : 0;

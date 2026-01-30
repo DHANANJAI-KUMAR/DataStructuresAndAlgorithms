@@ -29,8 +29,8 @@
                     return true;
 
                 // Right rotate s1
-                char last = s1[s1.Length - 1];
-                s1 = last + s1.Substring(0, s1.Length - 1);
+                char last = s1[s1.Length-1];
+                s1 = last + s1.Substring(0, s1.Length-1);
             }
             return false;
         }

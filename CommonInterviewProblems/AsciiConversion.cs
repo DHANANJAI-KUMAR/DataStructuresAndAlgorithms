@@ -9,14 +9,14 @@ namespace CommonInterviewProblems
         public void AsciiConversionTest()
         {
             Console.WriteLine("AAAA");
-            var aa = solution(29);
+            var aa = SumOfDigits(29);
             string s = "The quick brown fox jumps over the lazy dog";
             var upperCaseStr = ConvertToUpperCase(s);
             var lowerCaseStr = ConvertToLowerCase(s);
             //AzciiToIntPangram();
 
         }
-        int solution(int n)
+        private int SumOfDigits(int n)
         {
             int sum = 0;
             while (n > 0)

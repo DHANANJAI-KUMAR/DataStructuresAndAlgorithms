@@ -49,7 +49,7 @@ namespace CommonInterviewProblems
             string[] symbols = { "I", "IV", "V", "IX", "X", "XL", "L", "XC", "C", "CD", "D", "CM", "M" };
 
             string res = "";
-            int i = baseValues.Length - 1;
+            int i = baseValues.Length-1;
 
             while (x > 0)
             {

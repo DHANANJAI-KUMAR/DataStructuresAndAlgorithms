@@ -27,7 +27,7 @@ namespace ArrayCodingTests
             for (int i = 0; i < arr.Length; i++)
             {
                 stack.Push(arr[i]);
-                if ( (i+1) % k == 0 || i == arr.Length - 1) 
+                if ( (i+1) % k == 0 || i == arr.Length-1) 
                 {
                     while (stack.Count > 0)
                     {

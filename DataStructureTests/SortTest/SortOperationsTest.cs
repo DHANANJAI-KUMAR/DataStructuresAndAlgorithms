@@ -46,7 +46,7 @@ namespace DataStructureTests
         public void IntArrayQuickSortTest()
         {
             SortOperations.IntArrayGenerate(data, 2);
-            SortOperations.IntArrayQuickSort(data, 0, data.Length - 1);
+            SortOperations.IntArrayQuickSort(data, 0, data.Length-1);
         }
 
 
@@ -61,7 +61,7 @@ namespace DataStructureTests
             //Like the brute-force style of searching, it does way too much work to come up with the right answer!
             
             //Loop 0 to 9
-            for (int i = 0; i < data.Length - 1; i++)
+            for (int i = 0; i < data.Length-1; i++)
             {
                 //Loop 0 to 9
                 for (int j = 0; j < data.Length - i - 1; j++)
@@ -82,7 +82,7 @@ namespace DataStructureTests
             //moved. Again it is way too much work. Insertion Sort, while unimpressive, fares a bit better and turns out to be
             //a nice building block (if modified) for the Shell Sort. Varying the interval size drastically reduces the amount
             //of data movement (and the distance it has to move).
-            for (int i = 0; i < data.Length - 1; i++)
+            for (int i = 0; i < data.Length-1; i++)
             {
                 int min = IntArrayMin(data, i);
                 if (i != min)
@@ -130,7 +130,7 @@ namespace DataStructureTests
 
             // The intervals for the shell sort must be sorted, ascending
 
-            for (k = intervals.Length - 1; k >= 0; k--)
+            for (k = intervals.Length-1; k >= 0; k--)
             {
                 int interval = intervals[k];
                 for (m = 0; m < interval; m++)
@@ -169,7 +169,7 @@ namespace DataStructureTests
         public static void IntArrayGenerate(int[] data, int randomSeed)
         {
             Array.Copy(new int[] { 2, 10, 5, 3, 7, 4, 9, 0, 6, 1 }, data, data.Length);
-            Console.Clear();
+            //Console.Clear();
             Console.WriteLine("Original Array:" + string.Join(",", data));
 
             //int[] series = { 2, 10, 5, 3, 7, 4, 9, 0, 6, 1 };

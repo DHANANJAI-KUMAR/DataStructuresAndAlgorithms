@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Ds.Common.Lib
 {
-    public class ArrayUtil
+    public static class ArrayUtil
     {
         public static void Swap<T>(T[] arr, int i, int j)
         {

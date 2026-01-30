@@ -24,7 +24,7 @@
         int FindBound(int[] arr, int target, bool findFirst)
         {
             int left = 0;
-            int right = arr.Length - 1;
+            int right = arr.Length-1;
             int result = -1;
 
             while (left <= right)

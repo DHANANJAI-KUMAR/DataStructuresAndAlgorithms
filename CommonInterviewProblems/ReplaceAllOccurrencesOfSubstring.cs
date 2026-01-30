@@ -26,7 +26,7 @@ namespace CommonInterviewProblems
                     result.Append(newSub);
 
                     // Skip the characters of s1
-                    i += oldSub.Length - 1;
+                    i += oldSub.Length-1;
                 }
                 else
                 {

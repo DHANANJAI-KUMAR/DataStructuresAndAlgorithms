@@ -28,6 +28,7 @@
             string[] integers = input.Split(" ".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0; i < integers.Length; i++)
                 Console.WriteLine("i={0} integers[i]={1}", i, integers[i]);
+
             int[] data = new int[integers.Length];
             for (int i = 0; i < data.Length; i++)
                 data[i] = int.Parse(integers[i]);
@@ -35,22 +36,18 @@
             for (int i = 0; i < data.Length; i++)
                 Console.WriteLine("i={0} data[i]={1}", i, data[i]);
 
-            while (true)
-            {
-                Console.WriteLine("Please enter a number you want to find (blank line to end):");
-                input = Console.ReadLine();
-                if (input.Length == 0)
-                    break;
-                int searchItem = int.Parse(input);
-                Console.WriteLine("Please enter a position to start searching from (0 for beginning): ");
-                input = Console.ReadLine();
-                int searchPos = int.Parse(input);
-                int foundPos = IntArrayLinearSearch(data, searchItem, searchPos);
-                if (foundPos < 0)
-                    Console.WriteLine("Item {0} not found", searchItem);
-                else
-                    Console.WriteLine("Item {0} found at position {1}", searchItem, foundPos);
-            }
+            Console.WriteLine("Please enter a number you want to find (blank line to end):");
+            int searchItem = 145;
+                
+            Console.WriteLine("Please enter a position to start searching from (0 for beginning): ");
+            int searchPos = 0;
+                
+            int foundPos = IntArrayLinearSearch(data, searchItem, searchPos);
+            if (foundPos < 0)
+                Console.WriteLine("Item {0} not found", searchItem);
+            else
+                Console.WriteLine("Item {0} found at position {1}", searchItem, foundPos);
+            
         }
 
         public static void BinarySearch()
@@ -73,7 +70,7 @@
         {
             Array.Sort(arr);
             int left = 0;
-            int right = arr.Length - 1;
+            int right = arr.Length-1;
 
             while (left <= right)
             {

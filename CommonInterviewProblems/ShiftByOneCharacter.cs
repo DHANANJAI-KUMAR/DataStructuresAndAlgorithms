@@ -15,7 +15,7 @@ namespace CommonInterviewProblems
 
         private string ShiftByOneCharacterMethod(string s)
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             // TODO: Implement the solution here
             for (int i = 0; i < s.Length; i++)
             {

@@ -22,7 +22,7 @@ namespace ArrayCodingTests
         {
             //All Permutation options
             string input = "ABCD";
-            Permute(input.ToCharArray(), 0, input.Length - 1);
+            Permute(input.ToCharArray(), 0, input.Length-1);
 
         }
 

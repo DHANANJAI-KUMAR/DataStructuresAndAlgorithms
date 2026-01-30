@@ -25,7 +25,7 @@ namespace CommonInterviewProblems
             //var str1 = LongestCommonPrefixUsingBinarySearch(arr);
             //Console.WriteLine($"LongestCommonPrefixUsingBinarySearch: {str1}");
 
-            var str2 = LongestCommonPrefixsingDivideAndConquer(arr, 0, arr.Length - 1);
+            var str2 = LongestCommonPrefixsingDivideAndConquer(arr, 0, arr.Length-1);
             Console.WriteLine($"LongestCommonPrefixsingDivideAndConquer: {str2}");
 
             
@@ -155,7 +155,7 @@ namespace CommonInterviewProblems
 
             // Get the first and last strings after sorting
             var first = arr[0];
-            var last = arr[arr.Length - 1];
+            var last = arr[arr.Length-1];
 
             //var sb = StringUtil.CommonPrefixFromString1(first, last);
             var sb = StringUtil.CommonPrefix1(first, last);

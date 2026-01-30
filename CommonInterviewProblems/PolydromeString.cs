@@ -4,11 +4,9 @@
     public sealed class PolydromeString
     {
         [TestMethod]
-        public void PolydromeStringTest()
+        public void CountPolydromeStringTest()
         {
             string input = "racecar";
-
-            //bool status = IsPalindromeDelete(input);
 
             int palindromeCount = CountPalindromicSubstrings(input);
             Console.WriteLine($"Found {palindromeCount} palindromic substrings.");
@@ -20,30 +18,35 @@
             
         }
 
-        private bool IsPalindrome(string s)
+
+        [TestMethod]
+        public void PolydromeStringTest()
         {
-            int left = 0, right = s.Length-1;
-            while (left < right)
-            {
-                if (s[left++] != s[right--])
-                    return false;
-            }
-            return true;
+            string input = "madam";
+
+            bool status = IsPalindromeSimple(input);
+            if(status)
+                Console.WriteLine("This is a polydrome!");
+
         }
 
-        private bool IsPalindromeDelete(string s)
+        private bool IsPalindromeSimple(string input)
         {
-            int left = 0, right = s.Length-1;
+            int left = 0;
+            int right = input.Length - 1;
+
             while (left < right)
             {
-                if (s[left] != s[right])
+                if (input[left] != input[right])
                     return false;
-                
+
                 left++;
                 right--;
             }
+
             return true;
         }
+
 
         private int CountPalindromicSubstrings(string input)
         {
@@ -60,7 +63,16 @@
             return count;
         }
 
-
+        private bool IsPalindrome(string s)
+        {
+            int left = 0, right = s.Length - 1;
+            while (left < right)
+            {
+                if (s[left++] != s[right--])
+                    return false;
+            }
+            return true;
+        }
 
     }
 }

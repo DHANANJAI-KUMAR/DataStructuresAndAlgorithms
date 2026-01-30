@@ -1,4 +1,7 @@
-﻿
+﻿for (int i = 0; j < arr.length; i++) 
+for (int j = arr.length-1; j >= 0; j--)  //Reverse loop
+int i = 512 % 10; result = Remainder = 2
+int i = 512 / 10; result = Quotient = 51
 
 1. Array and String Manipulation
 	Reverse a string or array.

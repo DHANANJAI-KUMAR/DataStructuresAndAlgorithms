@@ -7,11 +7,11 @@ namespace ArrayCodingTests
     public sealed class RotateAnArrayByd
     {
         [TestMethod]
-        public void RotateAnArrayBydTest()
+        public void RotateAnArrayToLeftBydTest()
         {
             //https://www.geeksforgeeks.org/array-rotation/
             //Input: arr[] = { 1, 2, 3, 4, 5, 6 }, d = 2
-            //Output: { 3, 4, 5, 6, 1, 2}
+            //Output:        { 3, 4, 5, 6, 1, 2}
 
             int[] arr = { 1, 2, 3, 4, 5, 6 };
             int d = 2;
@@ -24,7 +24,7 @@ namespace ArrayCodingTests
 
         private void RotateArr(int[] arr, int d)
         {
-            //Counterclockwise or Left
+            //Counter clockwise or Left
             int j = 0;
             while (j < d) {
 
@@ -35,8 +35,6 @@ namespace ArrayCodingTests
                 }
                 j++;
             }
-
-
         }
 
     }

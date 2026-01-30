@@ -28,7 +28,7 @@ namespace ArrayCodingTests
                 if (arr[i] == 0)
                 {
                     int j = i;
-                    while (j < arr.Length - 1 && arr[j] == 0)
+                    while (j < arr.Length-1 && arr[j] == 0)
                     {
                         //if (arr[j] != 0) 
                         ArrayUtil.Swap<int>(arr, j, j + 1);

@@ -7,11 +7,37 @@
         public void LargestRectangleAreaTest()
         {
 
-            int[] heights = { 2, 1, 5, 6, 2, 3 };
+            //int[] heights = { 2, 1, 5, 6, 2, 3 };
+            int[] heights = { 4, 4, 4, 4 };
             int maxArea = LargestRectangleAreaMethod(heights);
+            maxArea = MyLargestRectangleAreaMethod(heights);
             Console.WriteLine(maxArea); // Output: 10
         }
 
+        private int MyLargestRectangleAreaMethod(int[] heights)
+        {
+            var stack = new Stack<int>();
+            int i = 0;
+
+            while (i < heights.Length)
+            {
+                for (int j = i; j < heights.Length; j++)
+                {
+                    var minBar = Math.Min(heights[i], heights[j]);
+                    var maxArea = minBar * (j - i + 1);
+                    var stackValue = stack.Count > 0 ? stack.Peek() : 0;
+                    if (maxArea > stackValue)
+                    {
+                        stack.Clear();
+                        stack.Push(maxArea);
+                    }
+                }
+                i++;
+            }
+
+            return stack.Pop();
+        }
+        
         private int LargestRectangleAreaMethod(int[] heights)
         {
             int n = heights.Length;

@@ -19,12 +19,36 @@
             var result = TwoSum(nums, target);
             
             result = TwoSumWithTwoPointers(nums, target);
+            result = MyTwoSum(nums, 14);
             
             Console.WriteLine(string.Join(" ", result));
 
         }
 
-        private static int[] TwoSum(int[] nums, int target)
+        private int[] MyTwoSum(int[] nums, int target)
+        {
+            var result = new int[2];
+
+            int index = 0;
+            while (index < nums.Length)
+            {
+                for (int i = index+1; i < nums.Length; i++)
+                {
+                    if (nums[index] + nums[i] == target)
+                    {
+                        result[0] = nums[index];
+                        result[1] = nums[i];
+                        //break;
+                    }
+                }
+                index++;
+            }
+            return result;
+
+        }
+
+
+        private int[] TwoSum(int[] nums, int target)
         {
             var cache = new Dictionary<int, int>();
             for (int i = 0; i < nums.Length; i++)
@@ -41,7 +65,7 @@
 
         }
 
-        private static int[] TwoSumWithTwoPointers(int[] nums, int target)
+        private int[] TwoSumWithTwoPointers(int[] nums, int target)
         {
             for (int i = 0; i < nums.Length; i++)
             {

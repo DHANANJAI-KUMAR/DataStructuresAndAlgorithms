@@ -1,9 +1,9 @@
 ﻿using DataStructures.Nodes;
 
-namespace CommonInterviewProblems
+namespace DataStructures.BinaryTreeTest
 {
     [TestClass]
-    public sealed class BinaryTreeIsSymmetric
+    public sealed class IsBinaryTreeSymmetric
     {
         [TestMethod]
         public void BinaryTreeIsSymmetricTest()
@@ -17,7 +17,8 @@ namespace CommonInterviewProblems
 
             BinaryNode root = new BinaryNode(1,
                 new BinaryNode(2, new BinaryNode(3), new BinaryNode(4)),
-                new BinaryNode(2, new BinaryNode(4), new BinaryNode(3)));
+                new BinaryNode(2, new BinaryNode(4), new BinaryNode(3))
+            );
 
             Console.WriteLine(IsSymmetric(root)); // Output: True
         }
